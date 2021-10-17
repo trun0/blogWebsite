@@ -18,7 +18,7 @@ function Signup() {
 
 
   function handleSignup() {
-    if (signupUsername.length !== 0 || signupPassword.length !== 0) {
+    if (signupUsername.length !== 0 && signupPassword.length !== 0) {
       axios.post(baseURL + "/signupServer", {
           username: signupUsername,
           password: signupPassword
