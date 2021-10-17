@@ -27,7 +27,7 @@ function Contact() {
       .then(function (response) {
         if (response.data === true) {
           alert("Successfully send");
-          window.location.replace("http://localhost:3000/");
+          window.location.replace(baseURL);
         }
       })
       .catch(function (error) {

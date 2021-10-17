@@ -27,7 +27,7 @@ function Signup() {
           console.log(response);
           if(response.data === false) {
           alert("Successfully Signed up. Now, please login");
-          window.location.replace("http://localhost:3000/login");
+          window.location.replace(baseURL+"/login");
           }
           else {
             alert("Signup failed. Username already exists");

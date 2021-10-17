@@ -24,7 +24,7 @@ function Login(props) {
         if (response.data === true) {
           localStorage.setItem("usernaam", loginUsername);
           alert("Login succesfull");
-          return window.location.replace("http://localhost:3000/compose");
+          return window.location.replace(baseURL+"/compose");
         } else {
           alert("Login failed. Please try again!!");
         }

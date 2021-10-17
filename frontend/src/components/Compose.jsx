@@ -25,10 +25,10 @@ function Compose() {
         console.log(response);
         if (response.data === true) {
           alert("Succesfully published");
-          window.location.replace("http://localhost:3000/myblog");
+          window.location.replace(baseURL+"/myblog");
         } else {
           alert("Compose failed. Please try after logging in!!");
-          window.location.replace("http://localhost:3000/login");
+          window.location.replace(baseURL+"/login");
         }
       })
       .catch(function (error) {

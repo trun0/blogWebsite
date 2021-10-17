@@ -26,7 +26,7 @@ function MyBlog() {
       })
       .then(function (response) {
         console.log(response);
-        window.location.replace("http://localhost:3000/myblog");
+        window.location.replace(baseURL+"/myblog");
       })
       .catch(function (error) {
         console.log(error);
