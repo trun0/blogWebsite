@@ -29,6 +29,9 @@ function Contact() {
       .then(function (response) {
         if (response.data === true) {
           alert("Successfully send");
+          setContactUsername("");
+          setContactEmail("");
+          setContactMessage("");
           history.push("/");
         }
       })
