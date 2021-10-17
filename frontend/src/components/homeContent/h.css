@@ -1,0 +1,29 @@
+
+  .about, .home {
+    margin: 50px 8%;
+  }
+
+  .about h2, .home h2 {
+    margin-top: 20px;
+    letter-spacing: 2px;
+  }
+
+  .about p, .home p {
+    margin: 20px 0;  
+  } 
+
+  .contact-form {
+    margin: 0 10%;
+  }
+  
+  .contact-form-button {
+    margin-left: 15.75%;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .contact-form-button {
+      margin-left: 0%;
+      margin: 10px 0;
+    }
+  }

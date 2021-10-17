@@ -1,0 +1,34 @@
+ .blogClass{
+   background-color: #fdffcd;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px 10% 30px;
+}
+
+.blogClass p em{
+    font-family: cursive;
+    font-size: 12px;
+}
+
+.blogClass h1 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+  }
+  .blogClass p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  .blogClass button {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    color: #f5ba13;
+    border: none;
+    height: 36px;
+    cursor: pointer;
+    outline: none;
+  }
+  
