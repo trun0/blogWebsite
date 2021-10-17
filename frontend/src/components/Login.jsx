@@ -2,8 +2,10 @@ import "./css/signup.css";
 import React, { useState } from "react";
 import axios from "axios";
 import baseURL from "./BaseUrl";
+import {useHistory, Link} from "react-router-dom";;
 
 function Login(props) {
+  const history = useHistory();
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
@@ -24,7 +26,7 @@ function Login(props) {
         if (response.data === true) {
           localStorage.setItem("usernaam", loginUsername);
           alert("Login succesfull");
-          return window.location.replace(baseURL+"/compose");
+          history.push("/compose");
         } else {
           alert("Login failed. Please try again!!");
         }
@@ -78,10 +80,10 @@ function Login(props) {
         </button>
 
         <div>
-          New here? <a href="/signup">Register</a>
+          New here? <Link to="/signup">Register</Link>
         </div>
         <div>
-          <a href="/">Go to Home</a>
+          <Link to="/">Go to Home</Link>
         </div>
       </form>
     </div>

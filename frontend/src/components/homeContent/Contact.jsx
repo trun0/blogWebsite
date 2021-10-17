@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import baseURL from "../BaseUrl";
+import { useHistory } from "react-router-dom";
 
 function Contact() {
+  const history = useHistory();
   const [contactUsername, setContactUsername] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactMessage, setContactMessage] = useState("");
@@ -27,7 +29,7 @@ function Contact() {
       .then(function (response) {
         if (response.data === true) {
           alert("Successfully send");
-          window.location.replace(baseURL);
+          history.push("/");
         }
       })
       .catch(function (error) {

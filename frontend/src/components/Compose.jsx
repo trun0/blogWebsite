@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./css/compose.css";
 import axios from "axios";
 import baseURL from "./BaseUrl";
+import {useHistory} from "react-router-dom";
 
 function Compose() {
+  const history = useHistory();
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
@@ -25,10 +27,10 @@ function Compose() {
         console.log(response);
         if (response.data === true) {
           alert("Succesfully published");
-          window.location.replace(baseURL+"/myblog");
+          history.push("/myblog");
         } else {
           alert("Compose failed. Please try after logging in!!");
-          window.location.replace(baseURL+"/login");
+          history.push("/login");
         }
       })
       .catch(function (error) {

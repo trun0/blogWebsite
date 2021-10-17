@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./css/blogTemplate.css";
 import baseURL from "./BaseUrl";
+import {useHistory} from "react-router-dom";
 
 function MyBlog() {
-  
+  const history = useHistory();
   const [myBlogsArray, setMyBlogsArray] = useState([]);
     axios
     .post(baseURL + "/myblogServer", { user: localStorage.getItem("usernaam") })
@@ -26,7 +27,7 @@ function MyBlog() {
       })
       .then(function (response) {
         console.log(response);
-        window.location.replace(baseURL+"/myblog");
+        history.push("/myblog");
       })
       .catch(function (error) {
         console.log(error);

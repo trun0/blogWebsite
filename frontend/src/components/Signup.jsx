@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./css/signup.css";
 import axios from "axios";
 import baseURL from "./BaseUrl";
+import {useHistory, Link} from "react-router-dom";
 
 function Signup() {
+  const history = useHistory();
   const [signupUsername, setSignupUsername] = useState("");
   const [signupPassword, setSignupPassword] = useState("");
   
@@ -24,7 +26,7 @@ function Signup() {
           console.log(response);
           if(response.data === false) {
           alert("Successfully Signed up. Now, please login");
-          window.location.replace(baseURL+"/login");
+          history.push("/login");
           }
           else {
             alert("Signup failed. Username already exists");
@@ -80,10 +82,10 @@ function Signup() {
         </button>
 
         <div>
-          Already registered? <a href="/login">Login</a>
+          Already registered? <Link to="/login">Login</Link>
         </div>
         <div>
-          <a href="/">Go to Home</a>
+          <Link to="/">Go to Home</Link>
         </div>
       </form>
     </div>
