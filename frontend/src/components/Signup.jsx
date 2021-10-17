@@ -14,9 +14,6 @@ function Signup() {
     setSignupPassword(event.target.value);
   }
 
-  function h(res) {
-    console.log(res);
-  }
 
   function handleSignup() {
     if (signupUsername.length !== 0 || signupPassword.length !== 0) {
