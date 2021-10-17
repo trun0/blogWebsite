@@ -13,11 +13,11 @@ function Home() {
           <li>Attract Audience</li>
           <li>And many more...</li>
         </ul>
-        Here are some intructions:
+        Here are some instructions:
         <ul>
           <li>You can view others blogs without logging in</li>
           <li>You can only publish a blog once you are logged in</li>
-          <li>You can delete your blogs by clicking the delete button in My blogs section(visible only when you are logged in</li>
+          <li>You can delete your blogs by clicking the delete button in My blogs section(visible only when you are logged in)</li>
         </ul>
       </p>
     </div>
