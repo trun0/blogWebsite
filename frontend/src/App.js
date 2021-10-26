@@ -23,25 +23,25 @@ function App() {
           <Header  />
           <Homepage />
         </Route>
-        <Route path="/blog">
+        <Route exact path="/blog">
           <Header />
           <Blog  />
         </Route>
-        <Route path="/myblog">
+        <Route exact path="/myblog">
           <Header />
           <MyBlog />
         </Route>
-        <Route path="/compose">
+        <Route exact path="/compose">
           <Header />
           <Compose />
         </Route>
-        <Route path="/signup">
+        <Route exact path="/signup">
           <Signup />
         </Route>
-        <Route path="/login">
+        <Route exact path="/login">
           <Login />
         </Route>
-        <Route path="/logout">
+        <Route exact path="/logout">
           <Logout />
           <Header />
           <Homepage />
