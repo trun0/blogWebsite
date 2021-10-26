@@ -3,13 +3,13 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
-
+import path from "path";
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({extended: true})); 
+app.use(express.urlencoded({ extended: true }));
 
 
 
@@ -151,18 +151,18 @@ app.route("/deleteBlogServer")
 				console.log(err);
 			else if (findUser) {
 				const arr = findUser.userBlogList;
-				for(var i = 0; i < arr.length; i++) {
-					console.log(arr[i]._id + " "+ id);
-					if(arr[i]._id == id){
+				for (var i = 0; i < arr.length; i++) {
+					console.log(arr[i]._id + " " + id);
+					if (arr[i]._id == id) {
 						console.log("Deleting from myblog");
-						findUser.userBlogList.splice(i, i+1);
+						findUser.userBlogList.splice(i, i + 1);
 						findUser.save();
-						break; 
+						break;
 					}
 				}
 			}
 		})
-		res.send(true); 
+		res.send(true);
 	});
 
 app.route("/contactServer")
@@ -170,7 +170,7 @@ app.route("/contactServer")
 		const name = req.body.name;
 		const email = req.body.email;
 		const message = req.body.message;
-console.log("hello contact");
+		console.log("hello contact");
 		const newContact = new Contact({ name: name, email: email, message: message });
 		newContact.save();
 		res.send(true);
@@ -182,13 +182,17 @@ app.get("/server", (req, res) => {
 	res.send({ message: "i have a message" });
 })
 
-if(process.env.NODE_ENV === 'production') {
-	app.use(express.static('frontend/build'));
-	app.get("*",(req,res) => {
-		res.sendFile(path.resolve(__dirname, "frontend","index.html"))
-	})
-}
+// if (process.env.NODE_ENV === 'production') {
+// 	app.use(express.static('frontend/build'));
+// 	app.get("*", (req, res) => {
+// 		res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"))
+// 	})
+// }
 
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static(path.join(__dirname, 'frontend/build')));
+	app.get('*', (req, res) => { res.sendFile(path.join(__dirname = 'frontend/build/index.html')); })
+}
 
 app.listen(PORT, () => {
 	console.log("Server started on port " + PORT);
