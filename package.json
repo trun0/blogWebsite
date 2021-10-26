@@ -4,7 +4,6 @@
   "description": "",
   "main": "server.js",
   "type": "module",
-
   "scripts": {    
     "frontend-install": "npm install --prefix frontend",
     "start": "node server.js",
