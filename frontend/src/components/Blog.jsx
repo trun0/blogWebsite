@@ -4,7 +4,7 @@ import BlogTemplate from "./BlogTemplate";
 import baseURL from "./BaseUrl";
 
 function Blog() {
-  const [[blogsArray, change], setBlogsArray] = useState([[], true]);
+  let [[blogsArray, change], setBlogsArray] = useState([[], true]);
 
   if(change) {
     axios.get(baseURL + "/blogServer")
