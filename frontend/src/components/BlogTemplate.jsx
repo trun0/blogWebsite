@@ -19,7 +19,7 @@ function BlogTemplate(props) {
         <p className="date" >{props.date}</p>
       </h1>
       <hr></hr>
-      {readStatus ? <p>{props.body} <span><button className="btn btn-sm btn-outline-warning" onClick={handleClick} >read less</button></span></p> : <p>{props.body.slice(0, 200)} ...<span><button className="btn btn-sm btn-outline-warning" onClick={handleClick} >read more</button></span></p>}
+      {readStatus ? <p>{props.body} <span><button className="btn btn-sm btn-outline-warning readbtn" onClick={handleClick} >read less</button></span></p> : <p>{props.body.slice(0, 200)} ...<span><button className="btn btn-sm btn-outline-warning readbtn" onClick={handleClick} >read more</button></span></p>}
     </div>
   );
 }

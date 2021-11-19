@@ -28,10 +28,12 @@
     color: #f5ba13;
     border: none;
     height: 36px;
-    cursor: pointer;
-    outline: none;
   }
-  
+
+  .blogClass .readbtn {
+    position: absolute;
+  }
+
   .blogClass .date {
     color: rgb(121, 91, 37);
     font-size: small;
