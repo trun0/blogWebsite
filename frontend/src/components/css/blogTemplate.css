@@ -32,3 +32,9 @@
     outline: none;
   }
   
+  .blogClass .date {
+    color: rgb(121, 91, 37);
+    font-size: small;
+    float: right;
+  }
+  

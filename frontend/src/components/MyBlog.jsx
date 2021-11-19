@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./css/blogTemplate.css";
 import baseURL from "./BaseUrl";
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function MyBlog() {
   const history = useHistory();
   const [myBlogsArray, setMyBlogsArray] = useState([]);
-    axios
+  axios
     .post(baseURL + "/myblogServer", { user: localStorage.getItem("usernaam") })
     .then(function (response) {
       setMyBlogsArray(response.data);
@@ -42,10 +42,11 @@ function MyBlog() {
             <h1>
               <strong>{element.title}</strong>
               <em> by {element.composedBy}</em>
+              <p className="date" >{element.date}</p>
             </h1>
             <form>
               <button
-              type="button"
+                type="button"
                 onClick={deleteBlog}
                 className="btn btn-sm btn-outline-warning"
                 name="blogId"

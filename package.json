@@ -16,5 +16,15 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^6.0.11"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trun0/blogWebsite.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/trun0/blogWebsite/issues"
+  },
+  "homepage": "https://github.com/trun0/blogWebsite#readme"
 }

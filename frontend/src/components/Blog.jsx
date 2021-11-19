@@ -30,6 +30,7 @@ function Blog() {
             title={element.title}
             body={element.body}
             composedBy={element.composedBy}
+            date={element.date}
           />
         );
       })}
